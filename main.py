@@ -84,3 +84,12 @@ def compare_span(span_fn1, span_fn2, sizes=[10, 20, 50, 100, 1000, 5000, 10000])
       span_fn2
   ))
   return result
+
+def test_compare_span():
+    # TODO
+  def span_fn1(n):
+    return span_calc(n, 1, 2, lambda n: n*n)
+  def span_fn2(n):
+    return span_calc(n, 3, 2, lambda n: n*n)
+  res = compare_span(span_fn1, span_fn2)
+  print(res)
